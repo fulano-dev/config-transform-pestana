@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <Extern href="stdidcmd.h"/>
+  <Extern href="vsshlids.h"/>
+
+  <Commands package="guidConfigTransformPackage">
+    <Groups>
+      <Group guid="guidConfigTransformPackageCmdSet" id="MyMenuGroup" priority="0x0600">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_ITEMNODE"/>
+      </Group>
+    </Groups>
+
+    <Buttons>
+      <Button guid="guidConfigTransformPackageCmdSet" id="ApplyTransformCommandId" priority="0x0100" type="Button">
+        <Parent guid="guidConfigTransformPackageCmdSet" id="MyMenuGroup" />
+        <Strings>
+          <ButtonText>Aplicar Transformacao</ButtonText>
+        </Strings>
+      </Button>
+    </Buttons>
+  </Commands>
+
+  <Symbols>
+    <GuidSymbol name="guidConfigTransformPackage" value="{8a2e8b7f-9f3d-4c1e-b8a2-3d4f5e6a7b8c}" />
+
+    <GuidSymbol name="guidConfigTransformPackageCmdSet" value="{a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d}">
+      <IDSymbol name="MyMenuGroup" value="0x1020" />
+      <IDSymbol name="ApplyTransformCommandId" value="0x0100" />
+    </GuidSymbol>
+  </Symbols>
+</CommandTable>
